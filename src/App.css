@@ -53,5 +53,9 @@ ul {
   list-style-type: disc; /* This sets the bullet style to default */
   margin: 0; /* Optional: Resets margin */
   padding-left: 20px; /* Optional: Adjusts padding for better visibility */
+  
+}
+ul li::marker {
+  color: #FB7A41; /* Change bullet color here */
 }
 

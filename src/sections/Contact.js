@@ -2,9 +2,9 @@ import React from 'react';
 
 const Contact = () => {
     return (
-      <div className='h-screen'>
+      <div className='h-full lg:h-screen'>
         
-        <div className="max-w-4xl mx-auto p-6 mt-32 md:mt-0">
+        <div className="max-w-4xl mx-auto p-6 ">
             <h2 className="text-4xl font-bold mb-6 text-center underline-thick">Contact Us</h2>
             <p className="mb-4 text-gray-700 text-center">
                 We’d love to hear from you! Whether you have a question about our services, need assistance, or just want to share your feedback,

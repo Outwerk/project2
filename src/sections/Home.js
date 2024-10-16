@@ -5,7 +5,7 @@ import { FaTwitter, FaFacebook,FaLinkedin } from "react-icons/fa";
 export default function Home() {
     return (
         <>
-            <div className="h-screen pt-16 md:pt-36 ">
+            <div className="h-full lg:h-screen pt-16 md:pt-36">
                 <main className="py-6 px-4 sm:p-6 md:py-10 md:px-8">
                     <div className="max-w-4xl mx-auto grid grid-cols-1 lg:max-w-7xl lg:gap-x-16 lg:grid-cols-2 ">
 
