@@ -40,3 +40,11 @@
 html {
   scroll-behavior: smooth;
 }
+
+.underline-thick {
+  text-decoration: underline;
+  text-decoration-thickness: 3px; /* Adjust thickness as needed */
+  /* text-decoration-color: currentColor; Keeps the color consistent with text color */
+  text-decoration-color: #FB7A41;
+
+}

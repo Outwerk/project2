@@ -1,9 +1,11 @@
-import React from 'react'
+import React from 'react';
+import { SiGmail } from "react-icons/si";
+import { FaTwitter, FaFacebook } from "react-icons/fa";
 
 export default function Home() {
     return (
         <>
-            <div className="h-screen pt-16 md:pt-36 bg-slate-300">
+            <div className="h-screen pt-16 md:pt-36 ">
                 <main className="py-6 px-4 sm:p-6 md:py-10 md:px-8">
                     <div className="max-w-4xl mx-auto grid grid-cols-1 lg:max-w-7xl lg:gap-x-16 lg:grid-cols-2 ">
 
@@ -14,16 +16,26 @@ export default function Home() {
                         </div>
 
                         <div className='text-2xl mt-2 col-start-1 sm:col-span-2 lg:mt-[-50px] lg:row-start-1 lg:col-span-1  w-full md:w-[600px] h-full p-0 md:p-10 '>
-                            <h1 className='text-6xl text-teal-200 font-bold mb-2'>Cloud Funding Solution</h1>
-                            <p className="mt-4 text-2xl leading-[1.2] ">
-                            At "this APP",Our vision is to be your partner in realizing your business dreams, whether that means expanding your beauty salon, strengthening your attorney firm, or growing your convenience store
+                            <h1 className='text-6xl text-[#FB7A41] font-bold mb-2'>Get Your Loan Approved Fast!</h1>
+                            <p className="mt-8 text-2xl leading-[1.2] ">
+                                At <span className='italic font-semibold font-serif'>this APP Name </span>,Our vision is to be your partner in realizing your business dreams, whether that means expanding your beauty salon, strengthening your attorney firm, or growing your convenience store
                             </p>
                             <div className='flex gap-4 mt-10 '>
-                            <button class="bg-teal-300 text-white hover:outline hover:outline-teal-300 hover:text-black hover:bg-transparent  font-bold py-2 px-4 rounded transition duration-300">
-                                Contact</button>
-                            <button class="outline outline-teal-300 hover:text-white hover:bg-teal-300 font-bold py-2 px-4 rounded transition duration-300">
-                                Service</button>
+                                <button class="bg-[#FB7A41] text-white hover:outline hover:outline-[#FB7A41] hover:text-black hover:bg-transparent  font-bold py-2 px-4 rounded transition duration-300">
+                                    Apply Now</button>
+                                <button class="outline outline-[#FB7A41] hover:text-white hover:bg-[#FB7A41] font-bold py-2 px-4 rounded transition duration-300">
+                                    Services</button>
                             </div>
+                            <div className='flex items-center gap-4 mt-4 text-[#FB7A41]'>
+                                <p className='text-black font-semibold'>Follow us</p>
+                                <span className='hover:text-black'>
+                                    <FaFacebook />
+                                </span>
+                                <span className='hover:text-black'>
+                                    <FaTwitter />
+                                </span>
+                            </div>
+
                         </div>
                     </div>
                 </main>

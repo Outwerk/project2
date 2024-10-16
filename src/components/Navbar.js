@@ -20,7 +20,7 @@ const Navbar = () => {
                             smooth={true}
                             duration={500}
                             className="text-gray-300 hover:text-white cursor-pointer"
-                            activeClass="font-bold text-gray-300 border-b-2 border-green-300"
+                            activeClass="font-bold text-white border-b-2 border-[#FB7A41]"
                             spy={true}
                             exact="true"
                         >Home</Link>
@@ -29,7 +29,7 @@ const Navbar = () => {
                             smooth={true}
                             duration={500}
                             className="text-gray-300 hover:text-white cursor-pointer"
-                            activeClass="font-bold text-gray-300 border-b-2 border-green-300"
+                            activeClass="font-bold text-white border-b-2 border-[#FB7A41]"
                             spy={true}
                             exact="true"
                         >About</Link>
@@ -38,7 +38,7 @@ const Navbar = () => {
                             smooth={true}
                             duration={500}
                             className="text-gray-300 hover:text-white cursor-pointer"
-                            activeClass="font-bold text-gray-300 border-b-2 border-green-300"
+                            activeClass="font-bold text-white border-b-2 border-[#FB7A41]"
                             spy={true}
                             exact="true"
                         >Services</Link>
@@ -47,7 +47,7 @@ const Navbar = () => {
                             smooth={true}
                             duration={500}
                             className="text-gray-300 hover:text-white cursor-pointer"
-                            activeClass="font-bold text-gray-300 border-b-2 border-green-300"
+                            activeClass="font-bold text-white border-b-2 border-[#FB7A41]"
                             spy={true}
                             exact="true"
                         >Contact</Link>
@@ -85,13 +85,13 @@ const Navbar = () => {
                             </svg>
                         </button>
                     </div>
-                    <div className="mt-4 flex flex-col gap-1">
+                    <div className="mt-4 flex flex-col gap-2">
                     <Link
                             to="home"
                             smooth={true}
                             duration={500}
                             className="text-gray-300 hover:text-white cursor-pointer"
-                            activeClass="font-bold text-gray-300 text-2xl"
+                            activeClass="font-bold text-gray-300 text-2xl underline decoration-green-300"
                             spy={true}
                             exact="true"
                             onClick={toggleSidebar}
@@ -101,7 +101,7 @@ const Navbar = () => {
                             smooth={true}
                             duration={500}
                             className="text-gray-300 hover:text-white cursor-pointer"
-                            activeClass="font-bold text-gray-300 text-2xl"
+                            activeClass="font-bold text-gray-300 text-2xl underline decoration-green-300"
                             spy={true}
                             exact="true"
                             onClick={toggleSidebar}
@@ -111,7 +111,7 @@ const Navbar = () => {
                             smooth={true}
                             duration={500}
                             className="text-gray-300 hover:text-white cursor-pointer"
-                            activeClass="font-bold text-gray-300 text-2xl"
+                            activeClass="font-bold text-gray-300 text-2xl underline decoration-green-300"
                             spy={true}
                             exact="true"
                             onClick={toggleSidebar}
@@ -121,7 +121,7 @@ const Navbar = () => {
                             smooth={true}
                             duration={500}
                             className="text-gray-300 hover:text-white cursor-pointer"
-                            activeClass="font-bold text-gray-300 text-2xl"
+                            activeClass="font-bold text-gray-300 text-2xl underline decoration-green-300"
                             spy={true}
                             exact="true"
                             onClick={toggleSidebar}
