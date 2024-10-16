@@ -44,12 +44,12 @@ const Contact = () => {
                         id="message"
                         rows="4"
                         required
-                        className="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        className="w-full border border-gray-300 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-[#FB7A41]"
                     ></textarea>
                 </div>
                 <button
                     type="submit"
-                    className="w-full bg-blue-500 text-white font-semibold rounded-md p-2 hover:bg-blue-600 transition duration-200"
+                    className="w-full bg-[#FB7A41] text-white font-semibold rounded-md p-2 hover:bg-[#e36f3d] transition duration-200"
                 >
                     Send Message
                 </button>
