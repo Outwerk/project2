@@ -1,6 +1,6 @@
 import React from 'react';
-import { SiGmail } from "react-icons/si";
-import { FaTwitter, FaFacebook } from "react-icons/fa";
+import { FaTwitter, FaFacebook,FaLinkedin } from "react-icons/fa";
+
 
 export default function Home() {
     return (
@@ -17,7 +17,7 @@ export default function Home() {
 
                         <div className='text-2xl mt-2 col-start-1 sm:col-span-2 lg:mt-[-50px] lg:row-start-1 lg:col-span-1  w-full md:w-[600px] h-full p-0 md:p-10 '>
                             <h1 className='text-6xl text-[#FB7A41] font-bold mb-2'>Get Your Loan Approved Fast!</h1>
-                            <p className="mt-8 text-2xl leading-[1.2] ">
+                            <p className="mt-8 text-2xl leading-[1.5] ">
                                 At <span className='italic font-semibold font-serif'>this APP Name </span>,Our vision is to be your partner in realizing your business dreams, whether that means expanding your beauty salon, strengthening your attorney firm, or growing your convenience store
                             </p>
                             <div className='flex gap-4 mt-10 '>
@@ -26,13 +26,16 @@ export default function Home() {
                                 <button class="outline outline-[#FB7A41] hover:text-white hover:bg-[#FB7A41] font-bold py-2 px-4 rounded transition duration-300">
                                     Services</button>
                             </div>
-                            <div className='flex items-center gap-4 mt-4 text-[#FB7A41]'>
+                            <div className='flex items-center gap-3 mt-5 text-[#FB7A41]'>
                                 <p className='text-black font-semibold'>Follow us</p>
                                 <span className='hover:text-black'>
                                     <FaFacebook />
                                 </span>
                                 <span className='hover:text-black'>
                                     <FaTwitter />
+                                </span>
+                                <span className='hover:text-black'>
+                                    <FaLinkedin />
                                 </span>
                             </div>
 
