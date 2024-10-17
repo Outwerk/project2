@@ -6,7 +6,7 @@ import Home from './sections/Home';
 import About from './sections/About';
 import Services from './sections/Services';
 import Contact from './sections/Contact';
-import "./App.css"
+import "./App.css"  
 
 function App() {
     return (
@@ -25,6 +25,9 @@ function App() {
             <div id="contact" >
                 <Contact/>
             </div>
+            
+           
+            
         </>
     );
 }
