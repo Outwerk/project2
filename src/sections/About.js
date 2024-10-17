@@ -46,14 +46,8 @@ export default function About() {
             We are dedicated to providing fast and reliable loan services. Our mission is to empower individuals with the financial resources they need to achieve their goals.
           </p>
           <p>
-            Founded in 2020, we have helped thousands of customers secure the funding they need. Our commitment to customer satisfaction sets us apart, and we are proud to be a trusted partner in your financial journey.
+          The way we work is vastly different than how you may have obtained funding from your bank in the past. A perfect credit score or history is not required to gain funding, and zero collateral is requested. We will also set up a repayment plan tailored to you specifically, making the payments not only flexible but also affordable. The most important reason why people have chosen us at skylight funding in the past is simply because businesses are more likely to get approved for cash advances than bank loans. 
           </p>
-
-          <h2 className="text-xl font-bold mt-7 mb-2">Our Vision</h2>
-          <p>
-            We envision a world where everyone has the financial resources to achieve their goals, whether it's buying a home, funding education, or expanding a business. Our dedicated team is committed to breaking down barriers to financial access and making the loan application process as simple and straightforward as possible.
-          </p>
-
           <h2 className="text-xl font-bold mb-2 mt-7">Our Commitment</h2>
           <p>
             At This App Name, we are committed to your success. We strive to provide exceptional service, competitive rates, and a hassle-free experience. Your financial well-being is our priority, and we take pride in helping you navigate your financial journey.

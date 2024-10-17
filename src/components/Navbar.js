@@ -25,6 +25,24 @@ const Navbar = () => {
                             exact="true"
                         >Home</Link>
                         <Link
+                            to="whoWeFund"
+                            smooth={true}
+                            duration={500}
+                            className="text-gray-300 hover:text-white cursor-pointer"
+                            activeClass="font-bold text-white border-b-2 border-[#FB7A41]"
+                            spy={true}
+                            exact="true"
+                        >Who We Fund</Link>
+                        <Link
+                            to="howItWork"
+                            smooth={true}
+                            duration={500}
+                            className="text-gray-300 hover:text-white cursor-pointer"
+                            activeClass="font-bold text-white border-b-2 border-[#FB7A41]"
+                            spy={true}
+                            exact="true"
+                        >How It Work</Link>
+                        <Link
                             to="about"
                             smooth={true}
                             duration={500}
@@ -34,23 +52,24 @@ const Navbar = () => {
                             exact="true"
                         >About</Link>
                         <Link
-                            to="services"
+                            to="loanProducts"
                             smooth={true}
                             duration={500}
                             className="text-gray-300 hover:text-white cursor-pointer"
                             activeClass="font-bold text-white border-b-2 border-[#FB7A41]"
                             spy={true}
                             exact="true"
-                        >Services</Link>
+                        >LoanProducts</Link>
+
                         <Link
-                            to="contact"
+                            to="requirement"
                             smooth={true}
                             duration={500}
                             className="text-gray-300 hover:text-white cursor-pointer"
                             activeClass="font-bold text-white border-b-2 border-[#FB7A41]"
                             spy={true}
                             exact="true"
-                        >Contact</Link>
+                        >Requirement</Link>
                     </div>
                     <div className="absolute right-0 flex items-center md:hidden">
                         <button
@@ -75,7 +94,7 @@ const Navbar = () => {
             </nav>
 
             {/* Sidebar for Mobile */}
-            <div className={`fixed inset-0 bg-gray-800 bg-opacity-75 transition-opacity ${isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
+            <div className={`z-50 fixed inset-0 bg-gray-800 bg-opacity-75 transition-opacity ${isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
                 <div className={`fixed right-0 top-0 h-full bg-gray-900 w-64 p-4 transition-transform transform ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
                     <div className="flex justify-between items-center">
                         <div className="text-white text-lg font-bold border-b-2 border-green-300">Menu</div>
@@ -86,7 +105,7 @@ const Navbar = () => {
                         </button>
                     </div>
                     <div className="mt-4 flex flex-col gap-2">
-                    <Link
+                        <Link
                             to="home"
                             smooth={true}
                             duration={500}
@@ -96,6 +115,25 @@ const Navbar = () => {
                             exact="true"
                             onClick={toggleSidebar}
                         >Home</Link>
+                        <Link
+                            to="whoWeFund"
+                            smooth={true}
+                            duration={500}
+                            className="text-gray-300 hover:text-white cursor-pointer"
+                            activeClass="font-bold text-gray-300 text-2xl underline decoration-green-300"
+                            spy={true}
+                            exact="true"
+                            onClick={toggleSidebar}
+                        >who We Fund</Link>
+                        <Link
+                            to="howItWork"
+                            smooth={true}
+                            duration={500}
+                            className="text-gray-300 hover:text-white cursor-pointer"
+                            activeClass="font-bold text-white border-b-2 border-[#FB7A41]"
+                            spy={true}
+                            exact="true"
+                        >How It Work</Link>
                         <Link
                             to="about"
                             smooth={true}
@@ -107,7 +145,7 @@ const Navbar = () => {
                             onClick={toggleSidebar}
                         >About</Link>
                         <Link
-                            to="services"
+                            to="loanProducts"
                             smooth={true}
                             duration={500}
                             className="text-gray-300 hover:text-white cursor-pointer"
@@ -115,17 +153,16 @@ const Navbar = () => {
                             spy={true}
                             exact="true"
                             onClick={toggleSidebar}
-                        >Services</Link>
+                        >Loan Products</Link>
                         <Link
-                            to="contact"
+                            to="requirement"
                             smooth={true}
                             duration={500}
                             className="text-gray-300 hover:text-white cursor-pointer"
-                            activeClass="font-bold text-gray-300 text-2xl underline decoration-green-300"
+                            activeClass="font-bold text-white border-b-2 border-[#FB7A41]"
                             spy={true}
                             exact="true"
-                            onClick={toggleSidebar}
-                        >Contact</Link>
+                        >Requirement</Link>
                     </div>
                 </div>
             </div>

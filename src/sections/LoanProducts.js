@@ -4,7 +4,7 @@ import {
   FaHandHoldingUsd, FaStethoscope, FaHome, FaBuilding, FaHammer, FaCar, FaLeaf
         } from 'react-icons/fa';
 
-const servicesData = [
+const LoanProductsData = [
   {
     id: 1,
     title: 'Personal Loans',
@@ -78,14 +78,14 @@ const servicesData = [
   }
 ];
 
-const Services = () => {
+const LoanProducts = () => {
   return (
     <div className='h-full md:h-screen'>
       <div className="max-w-6xl mx-auto p-6">
         <h2 className="text-3xl font-bold mb-6 text-center underline-thick  ">Our Services</h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {servicesData.map((service) => (
-            <div key={service.id} className="bg-white shadow-xl rounded-lg p-6 text-center text-[#FB7A41] hover:scale-110 hover:bg-[#FB7A41] hover:text-white   ">
+          {LoanProductsData.map((service) => (
+            <div key={service.id} className="bg-white shadow-xl rounded-lg p-6 text-center text-[#FB7A41] hover:scale-105 hover:bg-[#FB7A41] hover:text-white   ">
               <div className='flex justify-center items-center '>{service.icon}</div>
               <h3 className="text-xl font-semibold mb-2 text-black">{service.title}</h3>
               <p className="text-gray-700">{service.description}</p>
@@ -97,4 +97,4 @@ const Services = () => {
   );
 };
 
-export default Services;
+export default LoanProducts;

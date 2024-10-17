@@ -23,7 +23,7 @@ export default function Home() {
 
                         {/* Content */}
                         <motion.div
-                            style={{ zIndex: -1 }}
+                            style={{ zIndex: 0 }}
                             animate={{ x: 0 }}
                             initial={{ x: -500 }}
                             transition={{ ease: "easeOut", duration: 1 }}
@@ -35,8 +35,6 @@ export default function Home() {
                             <div className='flex gap-4 mt-10 '>
                                 <button class="bg-[#FB7A41] text-white hover:outline hover:outline-[#FB7A41] hover:text-black hover:bg-transparent  font-bold py-2 px-4 rounded transition duration-300">
                                     Apply Now</button>
-                                <button class="outline outline-[#FB7A41] hover:text-white hover:bg-[#FB7A41] font-bold py-2 px-4 rounded transition duration-300">
-                                    Services</button>
                             </div>
                             <div className='flex items-center gap-3 mt-5 text-[#FB7A41]'>
                                 <p className='text-black font-semibold'>Follow us</p>
