@@ -31,7 +31,7 @@ const HowItWorks = () => {
 
     return (
         <>
-            <div id="howItWork" className='h-full md:h-screen md:pt-28 '>
+            <div id="howItWork" className='h-full md:h-screen py-10 md:pt-28 '>
                 <h2 className="text-3xl font-bold mb-6 text-center underline-thick uppercase">How It Works</h2>
 
                 <div className='md:ms-52 p-3 flex flex-col items-center md:items-start justify-center gap-8'>

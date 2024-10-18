@@ -28,7 +28,7 @@ export default function Home() {
                             initial={{ x: -500 }}
                             transition={{ ease: "easeOut", duration: 1 }}
                             className='text-2xl mt-2 col-start-1 sm:col-span-2 lg:mt-0 ms-0 md:mx-10 lg:row-start-1 lg:col-span-1  w-full md:w-[600px] h-full p-0 md:p-0 '>
-                            <h1 className='text-6xl text-[#FB7A41] font-bold mb-2'>Get Your Loan Approved Fast!</h1>
+                            <h1 className='text-5xl md:text-6xl text-[#FB7A41] font-bold mb-2'>Get Your Loan Approved Fast!</h1>
                             <p className="mt-8 text-2xl leading-[1.5] ">
                                 At <span className='italic font-semibold font-serif'>this APP Name </span>,Our vision is to be your partner in realizing your business dreams, whether that means expanding your beauty salon, strengthening your attorney firm, or growing your convenience store
                             </p>
