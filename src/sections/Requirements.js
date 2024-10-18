@@ -54,7 +54,7 @@ const Requirements = () => {
             id="requirement" 
             className="h-screen md:pt-28 mt-8 w-full bg-slate-100 p-6 overflow-auto"
         >
-            <h2 className="text-4xl font-bold mb-8 text-center underline-thick">
+            <h2 className="text-2xl md:text-4xl mt-10 md:mt-0 font-bold mb-8 text-center underline-thick">
                 A FASTER WAY TO FUND YOUR DREAMS
             </h2>
 

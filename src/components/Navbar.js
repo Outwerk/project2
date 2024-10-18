@@ -130,9 +130,10 @@ const Navbar = () => {
                             smooth={true}
                             duration={500}
                             className="text-gray-300 hover:text-white cursor-pointer"
-                            activeClass="font-bold text-white border-b-2 border-[#FB7A41]"
+                            activeClass="font-bold text-gray-300 text-2xl underline decoration-green-300"
                             spy={true}
                             exact="true"
+                            onClick={toggleSidebar}
                         >How It Work</Link>
                         <Link
                             to="about"
@@ -159,9 +160,10 @@ const Navbar = () => {
                             smooth={true}
                             duration={500}
                             className="text-gray-300 hover:text-white cursor-pointer"
-                            activeClass="font-bold text-white border-b-2 border-[#FB7A41]"
+                            activeClass="font-bold text-gray-300 text-2xl underline decoration-green-300"
                             spy={true}
                             exact="true"
+                            onClick={toggleSidebar}
                         >Requirement</Link>
                     </div>
                 </div>
