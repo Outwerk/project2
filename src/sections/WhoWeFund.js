@@ -52,7 +52,7 @@ const WhoWeFund = () => {
 
     return (
           <div className='pt-[80px]'>
-            <div className="h-full lg:h-screen p-4 mt-1 bg-slate-50 overflow-hidden">
+            <div className="h-full lg:h-screen p-4 mt-1 bg-slate-100 overflow-hidden">
                 <h2 className="text-4xl font-bold mb-6 text-center underline-thick">Who We Fund</h2>
                 <div className="flex flex-col md:flex-row items-center md:items-start justify-center max-w-7xl mx-auto gap-x-16 gap-y-4 flex-wrap">
                     {fundingGroups.map((group, index) => (
@@ -61,7 +61,7 @@ const WhoWeFund = () => {
                             <h3 className="text-xl font-semibold mb-2 text-center text-black">{group.title}</h3>
                             <p className="text-gray-600 text-center">{group.description}</p>
                         </div>
-                    ))}
+                    ))} 
                 </div>
             </div>
         </div>

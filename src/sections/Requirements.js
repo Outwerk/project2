@@ -25,12 +25,12 @@ const Requirements = () => {
     ];
 
     return (
-        <div className="h-screen w-full bg-slate-100 p-6 mt-5 overflow-auto">
+        <div id="requirement" className="h-screen md:pt-28 mt-8' w-full bg-slate-100 p-6 mt-5 overflow-auto">
             <h2 className="text-4xl font-bold mb-8 text-center underline-thick">A FASTER WAY TO
                 FUND YOUR DREAMS</h2>
 
 
-            <div className='ms-1 md:ms-52 mt-10 text-xl'>
+            <div className='ms-1 md:ms-52 text-xl'>
                 <h1 className='text-2xl mb-8  uppercase'>Requirement</h1>
                 <p>Please send us a signed "Skylight Funding Loan Application"</p>
                 <p>with the following documents to e-mail: apps@skylightfunding.com</p>
