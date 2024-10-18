@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaClipboardCheck, FaDollarSign, FaUserCheck, FaHandshake, FaPaperPlane } from 'react-icons/fa';
+import { FaClipboardCheck, FaUserCheck, FaHandshake, FaPaperPlane } from 'react-icons/fa';
 
 const HowItWorks = () => {
     const [isVisible, setIsVisible] = useState(false);
@@ -31,10 +31,13 @@ const HowItWorks = () => {
 
     return (
         <>
-            <div id="howItWork" className='h-full md:h-screen py-10 md:pt-28 '>
+            <div id="howItWork" className='h-full md:h-screen py-10 md:pt-28 relative'>
                 <h2 className="text-3xl font-bold mb-6 text-center underline-thick uppercase mt-6 md:mt-0">How It Works</h2>
 
-                <div className='md:ms-52 p-3 flex flex-col items-center md:items-start justify-center gap-8'>
+
+
+
+                <div className='md:ms-52 p-3 flex flex-col items-center md:items-start justify-center gap-6'>
 
 
 
@@ -56,9 +59,9 @@ const HowItWorks = () => {
                     </motion.div>
 
                     <motion.div
-              initial={{ opacity: 0, y: 100 }}
-              animate={isVisible ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: 2 * 0.5 }}
+                        initial={{ opacity: 0, y: 100 }}
+                        animate={isVisible ? { opacity: 1, y: 0 } : {}}
+                        transition={{ duration: 0.5, delay: 2 * 0.5 }}
                         className='text-2xl flex items-start gap-8 '>
                         <div className='text-7xl'>2 </div>
                         <div className='mt-5'>
@@ -70,14 +73,10 @@ const HowItWorks = () => {
                         </div>
                     </motion.div>
 
-
-
-
-
                     <motion.div
-                    initial={{ opacity: 0, y: 100 }}
-                    animate={isVisible ? { opacity: 1, y: 0 } : {}}
-                    transition={{ duration: 0.5, delay: 3 * 0.5 }}
+                        initial={{ opacity: 0, y: 100 }}
+                        animate={isVisible ? { opacity: 1, y: 0 } : {}}
+                        transition={{ duration: 0.5, delay: 3 * 0.5 }}
                         className='text-2xl flex items-start gap-8 '>
                         <div className='text-7xl'>3 </div>
                         <div className='mt-5'>
@@ -89,15 +88,10 @@ const HowItWorks = () => {
                         </div>
                     </motion.div>
 
-
-
-
-
-
                     <motion.div
-                         initial={{ opacity: 0, y: 100 }}
-                         animate={isVisible ? { opacity: 1, y: 0 } : {}}
-                         transition={{ duration: 0.5, delay: 4 * 0.5 }}
+                        initial={{ opacity: 0, y: 100 }}
+                        animate={isVisible ? { opacity: 1, y: 0 } : {}}
+                        transition={{ duration: 0.5, delay: 4 * 0.5 }}
                         className='text-2xl flex items-start gap-8 '>
                         <div className='text-7xl'>4 </div>
                         <div className='mt-5'>
@@ -109,15 +103,11 @@ const HowItWorks = () => {
                         </div>
                     </motion.div>
 
-
-
-
-
-
-
-
                 </div>
-
+                <div className='bg-[#FB7A41] text-white text-lg md:text-xl p-4 mt-4 md:px-52 '>
+                    <p className='font-bold'>Have you been turned down for a small business loan?</p>
+                    <p className='font-semibold'> Don't worry! There are various alternative funding options available that can help you secure the capital needed to grow your business.</p>
+                </div>
 
 
             </div>

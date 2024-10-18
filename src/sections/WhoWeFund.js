@@ -1,5 +1,7 @@
 import { FaBriefcase, FaCar, FaUtensils, FaTooth, FaStore, FaHeart } from 'react-icons/fa';
-import { FaScissors } from "react-icons/fa6";
+import { FaScissors } from "react-icons/fa6";  
+import { motion } from 'framer-motion'; 
+import { useState } from 'react';
 
 const WhoWeFund = () => {
     const fundingGroups = [
@@ -50,17 +52,33 @@ const WhoWeFund = () => {
         }
     ];
 
+    const [flippedCards, setFlippedCards] = useState(Array(fundingGroups.length).fill(false));
+    const [isHovering, setIsHovering] = useState(false)
+  
+  
+    const handleCardClick = (index) => {
+      setIsHovering(true)
+      const updatedFlippedCards = [...flippedCards];
+      updatedFlippedCards[index] = !updatedFlippedCards[index];
+      setFlippedCards(updatedFlippedCards);
+      setIsHovering(false)
+    };
+
     return (
-          <div className='pt-[80px]'>
+          <div className='pt-[90px]'>
             <div id="whoWeFund"  className="h-full lg:h-screen p-4 mt-1 bg-slate-100 overflow-hidden">
                 <h2 className="mt-24 md:mt-20 text-4xl font-bold mb-6 text-center underline-thick uppercase">Who We Fund</h2>
                 <div className="flex flex-col md:flex-row items-center md:items-start justify-center max-w-7xl mx-auto gap-x-16 gap-y-4 flex-wrap">
                     {fundingGroups.map((group, index) => (
-                        <div key={index} className="bg-white p-6 rounded-lg shadow-xl flex flex-col items-center transition-transform transform hover:scale-105 h-full w-80 text-[#FB7A41]  hover:bg-[#FB7A41] hover:text-white  ">
+                        <motion.div
+                        onHoverStart={() => !isHovering? handleCardClick(index):{}}
+                        animate={{ rotateX: flippedCards[index] ? 360 : 0 }}
+                        transition={{ duration: 0.6 }}
+                        key={index} className="bg-white p-6 rounded-lg shadow-xl flex flex-col items-center transition-transform transform hover:scale-105 h-full w-80 text-[#FB7A41]  hover:bg-[#FB7A41] hover:text-white  ">
                             {group.icon}
                             <h3 className="text-xl font-semibold mb-2 text-center text-black">{group.title}</h3>
                             <p className="text-gray-600 text-center">{group.description}</p>
-                        </div>
+                        </motion.div>
                     ))} 
                 </div>
             </div>
