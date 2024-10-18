@@ -30,7 +30,7 @@ export default function About() {
 
   return (
     <div id="about" className='h-full md:h-screens bg-slate-100  py-2 pb-8 mt-8 md:mt-0 z-0 md:pt-24'>
-      <div className="flex flex-col md:flex-row items-start justify-between max-w-7xl md:mx-auto gap-0 md:gap-20 px-4 md:px-2 lg:px-4 overflow-auto z-0">
+      <div ref={ref} className="flex flex-col md:flex-row items-start justify-between max-w-7xl md:mx-auto gap-0 md:gap-20 px-4 md:px-2 lg:px-4 overflow-auto z-0">
         
         {/* Content  */}
         <motion.div
@@ -41,7 +41,7 @@ export default function About() {
           transition={{ ease: "easeOut", duration: 1 }}
           className="flex-1 min-w-[200px] lg:min-w-[300px] px-1 lg:px-4"
         >
-          <h2 className="text-4xl underline-thick font-bold mb-5">About Us</h2>
+          <h2 className="text-4xl underline-thick font-bold mb-5 uppercase">About Us</h2>
           <p className="mb-2">
             We are dedicated to providing fast and reliable loan services. Our mission is to empower individuals with the financial resources they need to achieve their goals.
           </p>

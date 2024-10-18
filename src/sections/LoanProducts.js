@@ -62,7 +62,7 @@ const LoanProducts = () => {
   return (
     <div id='loanProducts' className='h-full md:h-screen mt-3 '>
       <div className="max-w-6xl mx-auto p-6  md:pt-36">
-        <h2 className="text-3xl font-bold mb-6 text-center underline-thick ">Loan products</h2>
+        <h2 className="text-3xl font-bold mb-6 text-center underline-thick uppercase">Loan products</h2>
         <div className="grid place-content-center md:grid-cols-2 lg:grid-cols-4 gap-6">
           {LoanProductsData.map((service) => (
             <div key={service.id} className="bg-white shadow-xl rounded-lg p-6 text-center text-[#FB7A41] hover:scale-105 hover:bg-[#FB7A41] hover:text-white   ">

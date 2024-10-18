@@ -17,20 +17,13 @@ function App() {
         <>
 
             <Navbar />
-            <div id="home" >
-                <Home />
-            </div>
-            <div id="whoWeFund" >
-                <WhoWeFund />
-            </div>
-            <div id="howItWork" >
-                <HowItWorks />
-            </div>  
 
+            <Home />
+            <WhoWeFund />
+            <HowItWorks />
             <About />
             <LoanProducts />
             <Requirements />
-
             
             <Footer />
 

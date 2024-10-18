@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaMoneyCheck, } from 'react-icons/fa';  
-import { TbLicense } from "react-icons/tb";
-import { FaSheetPlastic } from "react-icons/fa6";
+import { FaMoneyCheck } from 'react-icons/fa';  
+import { TbLicense } from 'react-icons/tb';
+import { FaSheetPlastic } from 'react-icons/fa6';
 
 const Requirements = () => {
     const requirements = [
@@ -19,19 +19,47 @@ const Requirements = () => {
         {
             title: "Driving License",
             description: "A Driving License",
-            icon: <TbLicense className="text-4xl  mb-2" />
+            icon: <TbLicense className="text-4xl mb-2" />
         },
-
     ];
 
-    return (
-        <div id="requirement" className="h-screen md:pt-28 mt-8' w-full bg-slate-100 p-6 mt-5 overflow-auto">
-            <h2 className="text-4xl font-bold mb-8 text-center underline-thick">A FASTER WAY TO
-                FUND YOUR DREAMS</h2>
+    const [isVisible, setIsVisible] = useState(false);
+    const ref = useRef(null);
+    // Observer 
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setIsVisible(true);
+                    observer.disconnect(); // Stop observing once visible
+                }
+            },
+            { threshold: 0.1 } // Trigger when 10% of the component is visible
+        );
 
+        if (ref.current) {
+            observer.observe(ref.current);
+        }
+
+        return () => {
+            if (ref.current) {
+                observer.unobserve(ref.current);
+            }
+        };
+    }, []);
+
+    return (
+        <div 
+            ref={ref} 
+            id="requirement" 
+            className="h-screen md:pt-28 mt-8 w-full bg-slate-100 p-6 overflow-auto"
+        >
+            <h2 className="text-4xl font-bold mb-8 text-center underline-thick">
+                A FASTER WAY TO FUND YOUR DREAMS
+            </h2>
 
             <div className='ms-1 md:ms-52 text-xl'>
-                <h1 className='text-2xl mb-8  uppercase'>Requirement</h1>
+                <h1 className='text-2xl mb-7 uppercase'>Requirement</h1>
                 <p>Please send us a signed "Skylight Funding Loan Application"</p>
                 <p>with the following documents to e-mail: apps@skylightfunding.com</p>
             </div>
@@ -40,10 +68,10 @@ const Requirements = () => {
                 {requirements.map((req, index) => (
                     <motion.div
                         key={index}
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.5, delay: index * 0.1 }}
-                        className="flex items-center mb-6"
+                        initial={{ opacity: 0, y: 100 }}
+                        animate={isVisible ? { opacity: 1, y: 0 } : {}}
+                        transition={{ duration: 0.5, delay: index * 0.5 }}
+                        className="flex items-center my-10"
                     >
                         <div className="mr-4 text-[#FB7A41]">{req.icon}</div>
                         <div>
@@ -53,7 +81,6 @@ const Requirements = () => {
                     </motion.div>
                 ))}
             </div> 
-          
         </div>
     );
 };

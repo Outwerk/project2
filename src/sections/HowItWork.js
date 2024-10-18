@@ -6,33 +6,6 @@ const HowItWorks = () => {
     const [isVisible, setIsVisible] = useState(false);
     const ref = useRef(null);
 
-    const steps = [
-        {
-            title: "Step 1: Application",
-            description: "Fill out our easy online application form to get started.",
-            icon: <FaClipboardCheck className="text-4xl text-blue-500 mb-2" />
-        },
-        {
-            title: "Step 2: Submit",
-            description: "Provide us with your last three months bank and credit card statements.",
-            icon: <FaUserCheck className="text-4xl text-green-500 mb-2" />
-        },
-        {
-            title: "Step 3: Approval",
-            description: "Receive a quick decision on your application.",
-            icon: <FaDollarSign className="text-4xl text-orange-500 mb-2" />
-        },
-        {
-            title: "Step 4: Agreement",
-            description: "We offer tailored solutions designed to meet your needs and foster business growth effectively",
-            icon: <FaHandshake className="text-4xl text-purple-500 mb-2" />
-        },
-        {
-            title: "Step 5: Assigned",
-            description: "Every client receives a dedicated financial advisor to guide them throughout the application process.",
-            icon: <FaPaperPlane className="text-4xl text-red-500 mb-2" />
-        }
-    ];
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -57,28 +30,102 @@ const HowItWorks = () => {
     }, []);
 
     return (
-        <div id='steps' className="h-screen p-4 mt-5 relative" ref={ref}>
-            <h2 className="text-4xl font-bold mb-8 text-center text-white underline-thick">How It Works</h2>
+        <>
+            <div id="howItWork" className='h-full md:h-screen pt-28 '>
+                <h2 className="text-3xl font-bold mb-6 text-center underline-thick uppercase">How It Works</h2>
 
-            <div className="flex flex-col md:flex-row items-start justify-center max-w-7xl mx-auto gap-x-3 ">
-                {steps.map((step, index) => (
+                <div className='md:ms-52 p-3 flex flex-col items-center md:items-start justify-center gap-8'>
+
+
+
                     <motion.div
-                        key={index}
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={isVisible ? { opacity: 1, y: (steps.length - index) * 63 - (index * index - index * 7.5) } : {}}
-                        transition={{ duration: 0.5, delay: index * 0.1 }}
-                        className="bg-white p-6 rounded-lg shadow-lg flex flex-col items-center transition-transform transform hover:scale-105 h-[220px] w-64 me-[5px]"
-                    >
-                        {step.icon}
-                        <h3 className="text-xl font-semibold mb-2 text-center">{step.title}</h3>
-                        <p className="text-gray-600 text-center">{step.description}</p>
+                        ref={ref}
+                        initial={{ opacity: 0, y: 100 }}
+                        animate={isVisible ? { opacity: 1, y: 0 } : {}}
+                        transition={{ duration: 0.5, delay: 1 * 0.5 }}
+                        className='text-2xl flex items-start gap-8 '>
+                        <div className='text-7xl'>1 </div>
+                        <div className='mt-5'>
+                            <div className='flex md:flex-row flex-col-reverse gap-2 '>
+                                <p className='text-3xl'>Application</p>
+                                <FaClipboardCheck className="text-3xl md:text-4xl text-[#FB7A41] mb-2" />
+                            </div>
+
+                            <p className='text-xl'>Fill out our easy online application form to get started.</p>
+                        </div>
                     </motion.div>
-                ))}
+
+                    <motion.div
+              initial={{ opacity: 0, y: 100 }}
+              animate={isVisible ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.5, delay: 2 * 0.5 }}
+                        className='text-2xl flex items-start gap-8 '>
+                        <div className='text-7xl'>2 </div>
+                        <div className='mt-5'>
+                            <div className='flex md:flex-row flex-col-reverse gap-2 '>
+                                <p className='text-3xl' >Statement</p>
+                                <FaPaperPlane className="text-3xl md:text-4xl text-[#FB7A41] mb-2" />
+                            </div>
+                            <p className='text-xl'>Provide us with your last three months bank and credit card statements.</p>
+                        </div>
+                    </motion.div>
+
+
+
+
+
+                    <motion.div
+                    initial={{ opacity: 0, y: 100 }}
+                    animate={isVisible ? { opacity: 1, y: 0 } : {}}
+                    transition={{ duration: 0.5, delay: 3 * 0.5 }}
+                        className='text-2xl flex items-start gap-8 '>
+                        <div className='text-7xl'>3 </div>
+                        <div className='mt-5'>
+                            <div className='flex md:flex-row flex-col-reverse gap-2 '>
+                                <p className='text-3xl'>Agreement</p>
+                                <FaHandshake className="text-3xl md:text-4xl text-[#FB7A41] mb-2" />
+                            </div>
+                            <p className='text-xl'>We offer tailored solutions designed to meet your needs and foster business growth effectively.</p>
+                        </div>
+                    </motion.div>
+
+
+
+
+
+
+                    <motion.div
+                         initial={{ opacity: 0, y: 100 }}
+                         animate={isVisible ? { opacity: 1, y: 0 } : {}}
+                         transition={{ duration: 0.5, delay: 4 * 0.5 }}
+                        className='text-2xl flex items-start gap-8 '>
+                        <div className='text-7xl'>4 </div>
+                        <div className='mt-5'>
+                            <div className='flex md:flex-row flex-col-reverse gap-2 '>
+                                <p className='text-3xl'> Assigned</p>
+                                <FaUserCheck className="text-3xl md:text-4xl text-[#FB7A41] mb-2" />
+                            </div>
+                            <p className='text-xl'>Every client receives a dedicated financial advisor to guide them throughout the application process.</p>
+                        </div>
+                    </motion.div>
+
+
+
+
+
+
+
+
+                </div>
+
+
+
             </div>
-            <div className='absolute bottom-5 left-[32%] text-white'> 
-                <h1 className='max-w-5xl font-semibold text-2xl tracking-wide'>BEEN TURNED DOWN FOR A SMALL BUSINESS LOAN? CONSIDER A MERCHANT CASH ADVANCE. THESE ARE SMALLER BUT EASIER TO OBTAIN. THEY ARE ALSO PERFECT FOR THOSE LOOKING TO GET THEIR RESPECTIVE BUSINESS OFF THE GROUND, BUT LAST THE ESSENTIAL START-UP CAPITAL REQUIRED TO DO IT PROPERLY.</h1>
-            </div>
-        </div>
+
+
+
+
+        </>
     );
 };
 

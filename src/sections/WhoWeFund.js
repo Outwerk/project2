@@ -52,8 +52,8 @@ const WhoWeFund = () => {
 
     return (
           <div className='pt-[80px]'>
-            <div className="h-full lg:h-screen p-4 mt-1 bg-slate-100 overflow-hidden">
-                <h2 className="text-4xl font-bold mb-6 text-center underline-thick">Who We Fund</h2>
+            <div id="whoWeFund"  className="h-full lg:h-screen p-4 mt-1 bg-slate-100 overflow-hidden">
+                <h2 className="text-4xl font-bold mb-6 text-center underline-thick uppercase">Who We Fund</h2>
                 <div className="flex flex-col md:flex-row items-center md:items-start justify-center max-w-7xl mx-auto gap-x-16 gap-y-4 flex-wrap">
                     {fundingGroups.map((group, index) => (
                         <div key={index} className="bg-white p-6 rounded-lg shadow-xl flex flex-col items-center transition-transform transform hover:scale-105 h-full w-80 text-[#FB7A41]  hover:bg-[#FB7A41] hover:text-white  ">
