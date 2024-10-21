@@ -31,7 +31,7 @@ const HowItWorks = () => {
 
     return (
         <>
-            <div id="howItWork" className='h-full md:h-screen py-10 pt-12 md:pt-28 '>
+            <div id="howItWork" className='h-full md:h-screen py-10 pt-24 md:pt-28 '>
                 <h2 className="text-3xl font-bold mb-6 text-center underline-thick uppercase mt-6 md:mt-0">How It Works</h2>
 
 
@@ -67,7 +67,7 @@ const HowItWorks = () => {
                                 <p className='text-3xl' >Statement</p>
                                 <FaPaperPlane className="text-3xl md:text-4xl text-[#FB7A41] mb-2" />
                             </div>
-                            <p className='text-xl'>Provide us with your last three months bank and credit card statements.</p>
+                            <p className='text-xl'>Provide us with your last four months bank and credit card statements.</p>
                         </div>
                     </motion.div>
 
