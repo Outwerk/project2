@@ -27,9 +27,9 @@ function App() {
                     <HowItWorks />
                     <About />
                     <LoanProducts />
-                    <Requirements />
+                    <Requirements />    
+                    <Footer /> 
                 </>}
-            <Footer />
 
 
         </>

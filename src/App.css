@@ -72,3 +72,7 @@ ul li::marker {
   height: 300px; /* Set a height */
   width: 100%; /* Full width */
 }
+
+input:focus {
+  outline: none; /* Remove default outline */
+}
