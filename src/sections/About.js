@@ -29,7 +29,7 @@ export default function About() {
   }, []);
 
   return (
-    <div id="about" className='h-full md:h-screens bg-slate-100  py-2 pb-8  mt:5 md:mt-24 z-0 md:pt-24'>
+    <div id="about" className='h-full md:h-screens bg-slate-100  py-2 pb-8 pt-12  mt:5 md:mt-24 z-0 md:pt-24'>
       <div ref={ref} className="flex flex-col md:flex-row items-start justify-between max-w-7xl md:mx-auto gap-0 md:gap-20 px-4 md:px-2 lg:px-4 overflow-auto z-0">
         
         {/* Content  */}
