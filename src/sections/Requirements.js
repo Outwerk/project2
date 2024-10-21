@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaMoneyCheck } from 'react-icons/fa';  
+import { FaMoneyCheck } from 'react-icons/fa';
 import { TbLicense } from 'react-icons/tb';
 import { FaSheetPlastic } from 'react-icons/fa6';
 
@@ -49,29 +49,30 @@ const Requirements = () => {
     }, []);
 
     return (
-        <div 
-            ref={ref} 
-            id="requirement" 
-            className="h-screen md:pt-28 mt-8 w-full bg-slate-100 p-6 overflow-auto"
+        <div
+            ref={ref}
+            id="requirement"
+            className="h-screen md:pt-28 mt-8 md:mt-32 w-full bg-slate-100 p-6 overflow-auto"
         >
             <h2 className="text-2xl md:text-4xl mt-10 md:mt-0 font-bold mb-8 text-center underline-thick">
                 A FASTER WAY TO FUND YOUR DREAMS
             </h2>
 
-            <div className='ms-1 md:ms-52 text-xl'>
+            <div className='ms-1 md:ms-5 lg:ms-52 text-xl'>
                 <h1 className='text-2xl mb-7 uppercase'>Requirement</h1>
                 <p>Please send us a signed "Skylight Funding Loan Application"</p>
                 <p>with the following documents to e-mail: apps@skylightfunding.com</p>
             </div>
 
-            <div className="max-w-2xl ms-1 md:ms-52 mt-10">
+            <div className="max-w-2xl ms-1 md:ms-5 lg:ms-52 mt-10">
                 {requirements.map((req, index) => (
                     <motion.div
                         key={index}
                         initial={{ opacity: 0, y: 100 }}
                         animate={isVisible ? { opacity: 1, y: 0 } : {}}
-                        transition={{ duration: 0.5, delay: index * 0.5 }}
-                        className="flex items-center my-10"
+                        transition={{ duration: 0.4, delay: index * 0.5 }}
+                        whileHover={{ paddingLeft:20, transition: { duration: 0.1, }, }}
+                        className="flex items-center my-10 w-full md:w-fit"
                     >
                         <div className="mr-4 text-[#FB7A41]">{req.icon}</div>
                         <div>
@@ -80,7 +81,7 @@ const Requirements = () => {
                         </div>
                     </motion.div>
                 ))}
-            </div> 
+            </div>
         </div>
     );
 };

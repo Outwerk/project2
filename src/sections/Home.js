@@ -6,7 +6,7 @@ import { motion } from "framer-motion"
 export default function Home() {
     return (
         <>
-            <div id="home" className="h-full lg:h-screen pt-16 md:pt-36">
+            <div id="home" className="h-full lg:h-screen pt-16 md:pt-16 lg:pt-36">
                 <main className="py-6 px-6 sm:p-6 md:py-10 md:px-8">
                     <div className="max-w-4xl mx-auto grid grid-cols-1 lg:max-w-7xl lg:gap-x-16 lg:grid-cols-2 ">
                         {/* Images */}
@@ -27,7 +27,7 @@ export default function Home() {
                             animate={{ x: 0 }}
                             initial={{ x: -500 }}
                             transition={{ ease: "easeOut", duration: 1 }}
-                            className='text-2xl mt-2 col-start-1 sm:col-span-2 lg:mt-0 ms-0 md:mx-10 lg:row-start-1 lg:col-span-1  w-full md:w-[600px] h-full p-0 md:p-0 '>
+                            className='text-2xl mt-2 col-start-1 sm:col-span-2 lg:mt-0 ms-0 md:mx-1 lg:mx-10 lg:row-start-1 lg:col-span-1 w-full md:w-[600px] h-full p-0 md:p-0 '>
                             <h1 className='text-5xl md:text-6xl text-[#FB7A41] font-bold mb-2'>Get Your Loan Approved Fast!</h1>
                             <p className="mt-8 text-2xl leading-[1.5] ">
                                 At <span className='italic font-semibold font-serif'>this APP Name </span>,Our vision is to be your partner in realizing your business dreams, whether that means expanding your beauty salon, strengthening your attorney firm, or growing your convenience store

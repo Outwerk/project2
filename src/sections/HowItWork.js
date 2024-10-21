@@ -31,15 +31,13 @@ const HowItWorks = () => {
 
     return (
         <>
-            <div id="howItWork" className='h-full md:h-screen py-10 md:pt-28 relative'>
+            <div id="howItWork" className='h-full md:h-screen py-10 md:pt-28 '>
                 <h2 className="text-3xl font-bold mb-6 text-center underline-thick uppercase mt-6 md:mt-0">How It Works</h2>
 
 
 
 
-                <div className='md:ms-52 p-3 flex flex-col items-center md:items-start justify-center gap-6'>
-
-
+                <div className='lg:ms-52 md:ms-6 ms-2 p-3 flex flex-col items-center md:items-start justify-center     gap-6 md:gap-10 lg:gap-6'>
 
                     <motion.div
                         ref={ref}
@@ -103,13 +101,16 @@ const HowItWorks = () => {
                         </div>
                     </motion.div>
 
-                </div>
-                <div className='bg-[#FB7A41] text-white text-lg md:text-xl p-4 mt-4 md:px-52 '>
-                    <p className='font-bold'>Have you been turned down for a small business loan?</p>
-                    <p className='font-semibold'> Don't worry! There are various alternative funding options available that can help you secure the capital needed to grow your business.</p>
-                </div>
+                    <motion.div
+                        initial={{ opacity: 0, y: 100 }}
+                        animate={isVisible ? { opacity: 1, y: 0 } : {}}
+                        transition={{ duration: 0.5, delay: 5 * 0.5 }}
+                        className=' text-gray-700 text-lg md:text-xl mt-2'>
+                        <p className='font-bold'>Have you been turned down for a small business loan?</p>
+                        <p className='font-semibold'> Don't worry! There are various alternative funding options available that can help you secure the capital needed to grow your business.</p>
+                    </motion.div>
 
-
+                </div>
             </div>
 
 
