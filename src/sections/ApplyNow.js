@@ -348,7 +348,7 @@ const ApplyNow = ({ setShowPage }) => {
                     >
                         {loader ?
                             <div className="loader border-t-4 border-b-4 border-white rounded-full w-7 h-8 animate-spin relative left-[46%]"></div>
-                            : <> Send Message</>}
+                            : <> Submit</>}
                     </button>
                 </form >
 
