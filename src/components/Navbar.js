@@ -96,7 +96,7 @@ const Navbar = () => {
 
             {/* Sidebar for Mobile */}
             <div className={`z-50 fixed inset-0 bg-gray-800 bg-opacity-75 transition-opacity ${isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
-                <div className={`fixed right-0 top-0 h-full bg-gray-900 w-64 p-4 transition-transform transform ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+                <div className={`fixed right-0 top-0 h-full bg-gray-800 w-64 p-4 transition-transform transform ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
                     <div className="flex justify-between items-center">
                         <div className="text-lg "><img src={LOGO} alt="LOGO" width={45}/></div>
                         <button onClick={toggleSidebar} className="text-white">
