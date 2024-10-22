@@ -2,8 +2,7 @@ import React from 'react';
 import { FaTwitter, FaFacebook, FaLinkedin } from "react-icons/fa";
 import { motion } from "framer-motion"
 
-
-export default function Home({setShowPage}) {
+export default function Home({ setShowPage }) {
     return (
         <>
             <div id="home" className="h-full lg:h-screen pt-16 md:pt-16 lg:pt-36">
@@ -32,12 +31,16 @@ export default function Home({setShowPage}) {
                             <p className="mt-8 text-2xl leading-[1.5] ">
                                 At <span className='italic font-semibold font-serif'>this APP Name </span>,Our vision is to be your partner in realizing your business dreams, whether that means expanding your beauty salon, strengthening your attorney firm, or growing your convenience store
                             </p>
-                            <div className='flex gap-4 mt-10 '>
+                            <motion.div
+                                initial={{x:-400}}
+                                animate={{x:0}}
+                                transition={{type:"spring",stiffness:1800,duration:1,delay:0.6}}
+                                className='flex gap-4 mt-10 '>
                                 <button className="bg-[#FB7A41] text-white hover:outline hover:outline-[#FB7A41] hover:text-black hover:bg-transparent  font-bold py-2 px-4 rounded transition duration-300"
-                                onClick={()=> setShowPage(true)}
+                                    onClick={() => setShowPage(true)}
                                 >
                                     Apply Now</button>
-                            </div>
+                            </motion.div>
                             <div className='flex items-center gap-3 mt-5 text-[#FB7A41]'>
                                 <p className='text-black font-semibold'>Follow us</p>
                                 <span className='hover:text-black'>
@@ -50,7 +53,6 @@ export default function Home({setShowPage}) {
                                     <FaLinkedin />
                                 </span>
                             </div>
-
                         </motion.div>
                     </div>
                 </main>

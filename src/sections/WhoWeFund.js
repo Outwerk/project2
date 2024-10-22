@@ -1,7 +1,7 @@
+import { useState, useEffect, useRef } from 'react';
 import { FaBriefcase, FaCar, FaUtensils, FaTooth, FaStore, FaHeart } from 'react-icons/fa';
 import { FaScissors } from "react-icons/fa6";  
 import { motion } from 'framer-motion'; 
-import { useState } from 'react';
 
 const WhoWeFund = () => {
     const fundingGroups = [
@@ -23,7 +23,7 @@ const WhoWeFund = () => {
         {
             title: "Salons",
             description: "Funding for salons helps enhance their services and improve customer experience.",
-            icon: <FaScissors className="text-4xl  mb-2" />
+            icon: <FaScissors className="text-4xl mb-2" />
         },
         {
             title: "Dental Offices",
@@ -33,7 +33,7 @@ const WhoWeFund = () => {
         {
             title: "Numerous Retail Locations",
             description: "We fund a variety of retail businesses to enhance their inventory and customer experience.",
-            icon: <FaStore className="text-4xl  mb-2" />
+            icon: <FaStore className="text-4xl mb-2" />
         },
         {
             title: "Used Car Dealerships",
@@ -43,7 +43,7 @@ const WhoWeFund = () => {
         {
             title: "Health Companies",
             description: "We assist health companies in acquiring necessary resources and expanding their services.",
-            icon: <FaHeart className="text-4xl  mb-2" />
+            icon: <FaHeart className="text-4xl mb-2" />
         },
         {
             title: "Many More!",
@@ -53,28 +53,55 @@ const WhoWeFund = () => {
     ];
 
     const [flippedCards, setFlippedCards] = useState(Array(fundingGroups.length).fill(false));
-    const [isHovering, setIsHovering] = useState(false)
-  
-  
+    const [isHovering, setIsHovering] = useState(false);
+    const [isVisible, setIsVisible] = useState(false);
+    const ref = useRef(null);
+
     const handleCardClick = (index) => {
-      setIsHovering(true)
-      const updatedFlippedCards = [...flippedCards];
-      updatedFlippedCards[index] = !updatedFlippedCards[index];
-      setFlippedCards(updatedFlippedCards);
-      setIsHovering(false)
+        setIsHovering(true);
+        const updatedFlippedCards = [...flippedCards];
+        updatedFlippedCards[index] = !updatedFlippedCards[index];
+        setFlippedCards(updatedFlippedCards);
+        setIsHovering(false);
     };
 
+    // Observer
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                if (entry.isIntersecting) {
+                    setIsVisible(true);
+                    observer.disconnect(); // Stop observing once visible
+                }
+            },
+            { threshold: 0.1 }
+        );
+
+        if (ref.current) {
+            observer.observe(ref.current);
+        }
+
+        return () => {
+            if (ref.current) {
+                observer.unobserve(ref.current);
+            }
+        };
+    }, []);
+
     return (
-          <div className='pt-[90px]'>
-            <div id="whoWeFund"  className="h-full lg:h-screen p-4 mt-1 bg-slate-100 overflow-hidden">
+        <div className='pt-[90px]'>
+            <div ref={ref} id="whoWeFund" className="h-full lg:h-screen p-4 mt-1 bg-slate-100 overflow-hidden">
                 <h2 className="mt-24 md:mt-20 text-4xl font-bold mb-6 text-center underline-thick uppercase">Who We Fund</h2>
                 <div className="flex flex-col md:flex-row items-center md:items-start justify-center max-w-7xl mx-auto gap-x-16 gap-y-4 flex-wrap">
                     {fundingGroups.map((group, index) => (
                         <motion.div
-                        onHoverStart={() => !isHovering? handleCardClick(index):{}}
-                        animate={{ rotateX: flippedCards[index] ? 360 : 0 }}
-                        transition={{ duration: 0.6 }}
-                        key={index} className="bg-white p-6 rounded-lg shadow-xl flex flex-col items-center transition-transform transform hover:scale-105 h-full w-80 text-[#FB7A41]  hover:bg-[#FB7A41] hover:text-white  ">
+                            key={index}
+                            onHoverStart={() => !isHovering ? handleCardClick(index) : {}}
+                            initial={{ y: 100, opacity: 0 }} 
+                            animate={isVisible ? { rotateY: flippedCards[index] ? 360 : 0, y: 0, opacity: 1 } : {}}
+                            transition={{ duration: 0.6, delay: 0.1 * index }}
+                            className="bg-white p-6 rounded-lg shadow-xl flex flex-col items-center transition-transform transform hover:scale-105 h-full w-80 text-[#FB7A41] hover:bg-[#FB7A41] hover:text-white"
+                        >
                             {group.icon}
                             <h3 className="text-xl font-semibold mb-2 text-center text-black">{group.title}</h3>
                             <p className="text-gray-600 text-center">{group.description}</p>

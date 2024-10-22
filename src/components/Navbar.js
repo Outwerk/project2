@@ -97,7 +97,7 @@ const Navbar = () => {
             <div className={`z-50 fixed inset-0 bg-gray-800 bg-opacity-75 transition-opacity ${isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
                 <div className={`fixed right-0 top-0 h-full bg-gray-900 w-64 p-4 transition-transform transform ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
                     <div className="flex justify-between items-center">
-                        <div className="text-white text-lg font-bold border-b-2 border-green-300">Menu</div>
+                        <div className="text-white text-lg">LOGO</div>
                         <button onClick={toggleSidebar} className="text-white">
                             <svg className="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
@@ -110,7 +110,7 @@ const Navbar = () => {
                             smooth={true}
                             duration={500}
                             className="text-gray-300 hover:text-white cursor-pointer"
-                            activeClass="font-bold text-gray-300 text-2xl underline decoration-green-300"
+                            activeClass="font-bold text-gray-300 text-2xl underline decoration-[#FB7A41]"
                             spy={true}
                             exact="true"
                             onClick={toggleSidebar}
@@ -120,7 +120,7 @@ const Navbar = () => {
                             smooth={true}
                             duration={500}
                             className="text-gray-300 hover:text-white cursor-pointer"
-                            activeClass="font-bold text-gray-300 text-2xl underline decoration-green-300"
+                            activeClass="font-bold text-gray-300 text-2xl underline decoration-[#FB7A41]"
                             spy={true}
                             exact="true"
                             onClick={toggleSidebar}
@@ -130,7 +130,7 @@ const Navbar = () => {
                             smooth={true}
                             duration={500}
                             className="text-gray-300 hover:text-white cursor-pointer"
-                            activeClass="font-bold text-gray-300 text-2xl underline decoration-green-300"
+                            activeClass="font-bold text-gray-300 text-2xl underline decoration-[#FB7A41]"
                             spy={true}
                             exact="true"
                             onClick={toggleSidebar}
@@ -140,7 +140,7 @@ const Navbar = () => {
                             smooth={true}
                             duration={500}
                             className="text-gray-300 hover:text-white cursor-pointer"
-                            activeClass="font-bold text-gray-300 text-2xl underline decoration-green-300"
+                            activeClass="font-bold text-gray-300 text-2xl underline decoration-[#FB7A41]"
                             spy={true}
                             exact="true"
                             onClick={toggleSidebar}
@@ -150,7 +150,7 @@ const Navbar = () => {
                             smooth={true}
                             duration={500}
                             className="text-gray-300 hover:text-white cursor-pointer"
-                            activeClass="font-bold text-gray-300 text-2xl underline decoration-green-300"
+                            activeClass="font-bold text-gray-300 text-2xl underline decoration-[#FB7A41]"
                             spy={true}
                             exact="true"
                             onClick={toggleSidebar}
@@ -160,7 +160,7 @@ const Navbar = () => {
                             smooth={true}
                             duration={500}
                             className="text-gray-300 hover:text-white cursor-pointer"
-                            activeClass="font-bold text-gray-300 text-2xl underline decoration-green-300"
+                            activeClass="font-bold text-gray-300 text-2xl underline decoration-[#FB7A41]"
                             spy={true}
                             exact="true"
                             onClick={toggleSidebar}
