@@ -11,7 +11,7 @@ const Navbar = () => {
     return (
         <div>
             {/* Navbar */}
-            <nav className="bg-gray-800 p-4 fixed w-full  top-0 mb-48 z-50">
+            <nav className="bg-gray-800 p-4 fixed w-screen  top-0 mb-48 z-50">
                 <div className="flex items-center justify-between md:justify-center">
                     <div className="text-white text-lg font-bold me-4">My Logo</div>
                     <div className="hidden md:flex space-x-4 outline outline-white rounded-full py-3 px-8">
@@ -94,7 +94,7 @@ const Navbar = () => {
             </nav>
 
             {/* Sidebar for Mobile */}
-            <div className={`z-50 fixed inset-0 bg-gray-800 bg-opacity-75 transition-opacity ${isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'} w-full`}>
+            <div className={`z-50 fixed inset-0 bg-gray-800 bg-opacity-75 transition-opacity ${isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
                 <div className={`fixed right-0 top-0 h-full bg-gray-900 w-64 p-4 transition-transform transform ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
                     <div className="flex justify-between items-center">
                         <div className="text-white text-lg font-bold border-b-2 border-green-300">Menu</div>
