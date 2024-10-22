@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-scroll';
+import LOGO from "../assets/Logo.png"
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -13,7 +14,7 @@ const Navbar = () => {
             {/* Navbar */}
             <nav className="bg-gray-800 p-4 fixed w-screen  top-0 mb-48 z-50">
                 <div className="flex items-center justify-between md:justify-center">
-                    <div className="text-white text-lg font-bold me-4">My Logo</div>
+                    <div className="text-white text-lg font-bold me-4"><img src={LOGO} alt="LOGO" width={45} /></div>
                     <div className="hidden md:flex space-x-4 outline outline-white rounded-full py-3 px-8">
                         <Link
                             to="home"
@@ -97,7 +98,7 @@ const Navbar = () => {
             <div className={`z-50 fixed inset-0 bg-gray-800 bg-opacity-75 transition-opacity ${isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
                 <div className={`fixed right-0 top-0 h-full bg-gray-900 w-64 p-4 transition-transform transform ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}>
                     <div className="flex justify-between items-center">
-                        <div className="text-white text-lg">LOGO</div>
+                        <div className="text-lg "><img src={LOGO} alt="LOGO" width={45}/></div>
                         <button onClick={toggleSidebar} className="text-white">
                             <svg className="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
