@@ -7,26 +7,27 @@ export default function About() {
 
   // Observer for component
   useEffect(() => {
+    const currentNode = ref.current;
     const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true); // Trigger animation when in view
-          observer.unobserve(ref.current); // Stop observing after it becomes visible
-        }
-      },
-      { threshold: 0.1 } // Adjust threshold as needed
+        ([entry]) => {
+            if (entry.isIntersecting) {
+                setIsVisible(true);
+                observer.disconnect(); // Stop observing once visible
+            }
+        },
+        { threshold: 0.1 }
     );
 
-    if (ref.current) {
-      observer.observe(ref.current); // Start observing the component
+    if (currentNode) {
+        observer.observe(currentNode);
     }
 
     return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current); // Cleanup observer on unmount
-      }
+        if (currentNode) {
+            observer.unobserve(currentNode);
+        }
     };
-  }, []);
+}, []);
 
   return (
     <div id="about" className='h-full md:h-screens bg-slate-100  py-2 pb-8 pt-0  mt:6 md:mt-24 z-0 md:pt-24'>

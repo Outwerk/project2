@@ -27,6 +27,7 @@ const Requirements = () => {
     const ref = useRef(null);
     // Observer 
     useEffect(() => {
+        const currentNode = ref.current;
         const observer = new IntersectionObserver(
             ([entry]) => {
                 if (entry.isIntersecting) {
@@ -34,16 +35,16 @@ const Requirements = () => {
                     observer.disconnect(); // Stop observing once visible
                 }
             },
-            { threshold: 0.1 } // Trigger when 10% of the component is visible
+            { threshold: 0.1 }
         );
 
-        if (ref.current) {
-            observer.observe(ref.current);
+        if (currentNode) {
+            observer.observe(currentNode);
         }
 
         return () => {
-            if (ref.current) {
-                observer.unobserve(ref.current);
+            if (currentNode) {
+                observer.unobserve(currentNode);
             }
         };
     }, []);

@@ -55,7 +55,7 @@ const ApplyNow = ({ setShowPage }) => {
             }
         });
     };
-   
+
 
     // Empty Fields 
     function emptyFields() {
@@ -82,7 +82,6 @@ const ApplyNow = ({ setShowPage }) => {
 
     // FUNCTION to send mail 
     const sendEmail = (e) => {
-
         e.preventDefault()
         setLoader(true)
 
@@ -105,8 +104,26 @@ const ApplyNow = ({ setShowPage }) => {
     <p><strong>Alternate Contact No:</strong> ${altContactNo}</p>
 `;
 
+        showAlert();
+        // console.log(merchantFullName,
+        //     businessLegalName,
+        //     amountRequested,
+        //     email,
+        //     businessStartDate,
+        //     industry,
+        //     buisnessAddress,
+        //     EIN,
+        //     socialSec,
+        //     dateOfBirth,
+        //     purposeOfFunds,
+        //     homeAddress,
+        //     ownerShip,
+        //     contactNo,
+        //     altContactNo)
 
         // CONFIG for smtp-JS  with secure Token
+       
+       
         const config = {
             SecureToken: "b4f2ab17-40a5-4e52-8658-e2ee8e629dcb",
             To: 'outows50@gmail.com',
@@ -138,16 +155,15 @@ const ApplyNow = ({ setShowPage }) => {
 
         <div className='h-full lg:h-screen'>
 
-            <div className="max-w-6xl mx-auto p-6  mb-5">
+            <div className="max-w-6xl mx-auto p-6  mb-5 lg:mb-0">
                 <h2 className="text-4xl font-bold mb-5 text-center underline-thick">Apply Now</h2>
                 <p className="mb-2 text-gray-700 text-center">
                     We'd love to hear from you! Whether you have a question about our services, need assistance, or just want to share your feedback,
                     feel free to reach out to us using the form below.
                 </p>
-            
 
-
-                <form className="bg-white shadow-lg rounded-lg px-6 py-3 text-2xl">
+                {/* FORM */}
+                <form onSubmit={sendEmail} className="bg-white shadow-lg rounded-lg px-6 py-3 text-2xl">
                     <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-5 sm:grid-cols-6 ">
                         {/* Merchant Full Name */}
                         <div className="sm:col-span-3">
@@ -192,7 +208,8 @@ const ApplyNow = ({ setShowPage }) => {
                                 <input
                                     value={email}
                                     onChange={(e) => setEmail(e.target.value)}
-                                    type="email" name="email" id="email" className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#FB7A41] sm:text-lg sm:leading-6 ps-2" />
+                                    type="email" name="email" id="email" className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#FB7A41] sm:text-lg sm:leading-6 ps-2"
+                                    required />
                             </div>
                         </div>
 
@@ -204,7 +221,7 @@ const ApplyNow = ({ setShowPage }) => {
                                 <input
                                     value={industry}
                                     onChange={(e) => setIndustry(e.target.value)}
-                                    type="text" name="industry" id="industry" className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#FB7A41] sm:text-lg sm:leading-6 ps-2" />
+                                    type="text" name="industry" id="industry" className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#FB7A41] sm:text-lg sm:leading-6 ps-2" required />
                             </div>
                         </div>
                         {/* Business start date */}
@@ -215,7 +232,7 @@ const ApplyNow = ({ setShowPage }) => {
                                 <input
                                     value={businessStartDate}
                                     onChange={(e) => setBusinessStartDate(e.target.value)}
-                                    type="date" name="businessStartDate" id="businessStartDate" className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#FB7A41] sm:text-lg sm:leading-6 ps-2" />
+                                    type="date" name="businessStartDate" id="businessStartDate" className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#FB7A41] sm:text-lg sm:leading-6 ps-2" required />
                             </div>
                         </div>
                         {/* Date of birth */}
@@ -226,7 +243,7 @@ const ApplyNow = ({ setShowPage }) => {
                                 <input
                                     value={dateOfBirth}
                                     onChange={(e) => setDateOfBirth(e.target.value)}
-                                    type="date" name="dateOfBirth" id="dateOfBirth" className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#FB7A41] sm:text-lg sm:leading-6 ps-2" />
+                                    type="date" name="dateOfBirth" id="dateOfBirth" className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#FB7A41] sm:text-lg sm:leading-6 ps-2" required />
                             </div>
                         </div>
 
@@ -238,7 +255,8 @@ const ApplyNow = ({ setShowPage }) => {
                                 <input
                                     value={EIN}
                                     onChange={(e) => setEIN(e.target.value)}
-                                    type="text" name="EIN" id="EIN" className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#FB7A41] sm:text-lg sm:leading-6 ps-2" />
+                                    type="text" name="EIN" id="EIN" className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#FB7A41] sm:text-lg sm:leading-6 ps-2"
+                                    required />
                             </div>
                         </div>
 
@@ -280,7 +298,6 @@ const ApplyNow = ({ setShowPage }) => {
                             </div>
                         </div>
 
-
                         {/* Home Address */}
                         <div className="sm:col-span-3">
                             <label for="homeAddress" className="block text-lg font-medium leading-6 text-gray-900">Home Address</label>
@@ -300,7 +317,7 @@ const ApplyNow = ({ setShowPage }) => {
                                 <input
                                     value={ownerShip}
                                     onChange={(e) => setOwnerShip(e.target.value)}
-                                    type="text" name="ownerShip" id="ownerShip" className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#FB7A41] sm:text-lg sm:leading-6 ps-2" />
+                                    type="text" name="ownerShip" id="ownerShip" className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-[#FB7A41] sm:text-lg sm:leading-6 ps-2" required />
                             </div>
                         </div>
                         {/* Contact NO */}
@@ -324,20 +341,20 @@ const ApplyNow = ({ setShowPage }) => {
                                     required />
                             </div>
                         </div>
-
-
                     </div>
                     <button
                         type="submit"
-                        className="w-full rounded-md p-2 bg-[#FB7A41] text-white  hover:outline hover:outline-[#FB7A41] hover:text-black hover:bg-transparent  font-bold transition duration-300 mt-5"
+                        className="w-full  rounded-md p-2 bg-[#FB7A41] text-white  hover:outline hover:outline-[#FB7A41] hover:text-black hover:bg-transparent  font-bold transition duration-300 mt-5"
                     >
-                        Send Message
+                        {loader ?
+                            <div className="loader border-t-4 border-b-4 border-white rounded-full w-7 h-8 animate-spin relative left-[46%]"></div>
+                            : <> Send Message</>}
                     </button>
                 </form >
 
                 <button
                     type="submit"
-                    className="bg-[#FB7A41] text-white hover:outline hover:outline-[#FB7A41] hover:text-black hover:bg-transparent  font-bold py-3 px-6 rounded transition duration-300 mt-4"
+                    className="bg-[#FB7A41] text-white hover:outline hover:outline-[#FB7A41] hover:text-black hover:bg-transparent  font-bold py-3 px-6 rounded transition duration-300 mt-4 lg:absolute top-1 left-5"
                     onClick={() => setShowPage(false)}
                 >
                     Go Back

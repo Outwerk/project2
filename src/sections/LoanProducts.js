@@ -69,26 +69,27 @@ const LoanProducts = () => {
 
   // Observer
   useEffect(() => {
+    const currentNode = ref.current;
     const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-          observer.disconnect(); // Stop observing once visible
-        }
-      },
-      { threshold: 0.1 } // Trigger when 10% of the component is visible
+        ([entry]) => {
+            if (entry.isIntersecting) {
+                setIsVisible(true);
+                observer.disconnect(); // Stop observing once visible
+            }
+        },
+        { threshold: 0.1 }
     );
 
-    if (ref.current) {
-      observer.observe(ref.current);
+    if (currentNode) {
+        observer.observe(currentNode);
     }
 
     return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current);
-      }
+        if (currentNode) {
+            observer.unobserve(currentNode);
+        }
     };
-  }, []);
+}, []);
 
   return (
     <div id='loanProducts' className='h-full md:h-screen mb-24 md:mb-12 mt-24 md:mt-12 lg:mt-28'>

@@ -6,26 +6,27 @@ const HowItWorks = () => {
     const [isVisible, setIsVisible] = useState(false);
     const ref = useRef(null);
 
-
+    // Observer
     useEffect(() => {
+        const currentNode = ref.current;
         const observer = new IntersectionObserver(
             ([entry]) => {
                 if (entry.isIntersecting) {
                     setIsVisible(true);
-                    observer.disconnect(); // Stop observing once the component is visible
+                    observer.disconnect(); // Stop observing once visible
                 }
             },
-            {
-                threshold: 0.1 // Trigger when 10% of the component is visible
-            }
+            { threshold: 0.1 }
         );
 
-        if (ref.current) {
-            observer.observe(ref.current);
+        if (currentNode) {
+            observer.observe(currentNode);
         }
 
         return () => {
-            observer.disconnect();
+            if (currentNode) {
+                observer.unobserve(currentNode);
+            }
         };
     }, []);
 
