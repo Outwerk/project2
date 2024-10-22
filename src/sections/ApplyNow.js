@@ -203,7 +203,7 @@ const ApplyNow = ({ setShowPage }) => {
                         </div>
                         {/* Email*/}
                         <div className="sm:col-span-2">
-                            <label for="email" className="block text-lg font-medium leading-6 text-gray-900">email</label>
+                            <label for="email" className="block text-lg font-medium leading-6 text-gray-900">Email</label>
                             <div className="mt-2">
                                 <input
                                     value={email}
@@ -312,7 +312,7 @@ const ApplyNow = ({ setShowPage }) => {
 
                         {/* OwnerShip */}
                         <div className="sm:col-span-2 sm:col-start-1">
-                            <label for="ownerShip" className="block text-lg font-medium leading-6 text-gray-900">ownerShip</label>
+                            <label for="ownerShip" className="block text-lg font-medium leading-6 text-gray-900">OwnerShip</label>
                             <div className="mt-2">
                                 <input
                                     value={ownerShip}
@@ -322,7 +322,7 @@ const ApplyNow = ({ setShowPage }) => {
                         </div>
                         {/* Contact NO */}
                         <div className="sm:col-span-2">
-                            <label for="contactNo" className="block text-lg font-medium leading-6 text-gray-900">contact No</label>
+                            <label for="contactNo" className="block text-lg font-medium leading-6 text-gray-900">Contact No</label>
                             <div className="mt-2">
                                 <input
                                     value={contactNo}
