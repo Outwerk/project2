@@ -57,7 +57,7 @@ const WhoWeFund = () => {
     const [isVisible, setIsVisible] = useState(false);
     const ref = useRef(null);
 
-    const handleCardClick = (index) => {
+    const handleCardHover = (index) => {
         setIsHovering(true);
         const updatedFlippedCards = [...flippedCards];
         updatedFlippedCards[index] = !updatedFlippedCards[index];
@@ -97,7 +97,7 @@ const WhoWeFund = () => {
                     {fundingGroups.map((group, index) => (
                         <motion.div
                             key={index}
-                            onHoverStart={() => !isHovering ? handleCardClick(index) : {}}
+                            onHoverStart={() => !isHovering ? handleCardHover(index) : {}}
                             initial={{ y: 100, opacity: 0 }} 
                             animate={isVisible ? { rotateY: flippedCards[index] ? 360 : 0, y: 0, opacity: 1 } : {}}
                             transition={{ duration: 0.6, delay: 0.1 * index }}

@@ -59,7 +59,7 @@ const LoanProducts = () => {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef(null);
 
-  const handleCardClick = (index) => {
+  const handleCardHover = (index) => {
     setIsHovering(true);
     const updatedFlippedCards = [...flippedCards];
     updatedFlippedCards[index] = !updatedFlippedCards[index];
@@ -99,8 +99,8 @@ const LoanProducts = () => {
           {LoanProductsData.map((service, index) => (
             <motion.div
               key={service.id}
-              onHoverStart={() => !isHovering ? handleCardClick(index) : {}}
-              initial={{ y: 150, opacity: 0 }} // Start hidden
+              initial={{ y: 150, opacity: 0 }} 
+              onHoverStart={() => !isHovering ? handleCardHover(index) : {}}
               animate={isVisible ? { rotateY: flippedCards[index] ? 360 : 0, y: 0, opacity: 1 } : {}}
               transition={{ duration: 0.6, delay: 0.1 * index }}
               className="bg-white shadow-xl rounded-lg p-6 text-center text-[#FB7A41] hover:scale-105 hover:bg-[#FB7A41] hover:text-white perspective"
