@@ -15,6 +15,7 @@ export default function Home({ setShowPage }) {
                             initial={{ x: 500 }}
                             transition={{ ease: "easeOut", duration: 1 }}
                             className="grid gap-4 col-start-1 col-end-3 row-start-1 sm:mb-6 sm:grid-cols-4 lg:gap-6 lg:col-start-2 lg:row-end-6 lg:row-span-6 lg:mb-0 z-0">
+                                
                             <img src="https://t3.ftcdn.net/jpg/04/54/29/74/360_F_454297497_3puTxBIGgb3DoiAPyxWQcVe38dHMQhAb.jpg" alt="deal" className="w-full h-60 object-cover rounded-lg sm:h-52 sm:col-span-2 lg:col-span-full hover:scale-110 transition-transform duration-300" loading="lazy" />
                             
                             <img src="https://media.istockphoto.com/id/1008861200/photo/stack-of-one-hundred-dollars-notes.jpg?s=612x612&w=0&k=20&c=Q5Dl6Giw7iWOSWgjy5fnkEyRCTgxT8cJyFIAbOMo7TA=" alt="offer" className="hidden w-full h-52 object-cover rounded-lg sm:block sm:col-span-2 md:col-span-1 lg:row-start-2 lg:col-span-2 lg:h-36 hover:scale-110 transition-transform duration-300" loading="lazy" />
@@ -29,7 +30,7 @@ export default function Home({ setShowPage }) {
                             transition={{ ease: "easeOut", duration: 1 }}
                             className='text-2xl mt-2 col-start-1 sm:col-span-2 lg:mt-0 ms-0 md:mx-1 lg:mx-10 lg:row-start-1 lg:col-span-1 w-full md:w-[600px] h-full p-0 md:p-0 '>
                             <h1 className='text-5xl md:text-6xl text-[#FB7A41] font-bold mb-2'>Get Your Loan Approved Fast!</h1>
-                            <p className="mt-8 text-2xl leading-[1.5] ">
+                            <p className="mt-8 mb-[-15px] text-2xl leading-[1.5] ">
                                 At <span className='italic font-semibold font-serif'>this APP Name </span>,Our vision is to be your partner in realizing your business dreams, whether that means expanding your beauty salon, strengthening your attorney firm, or growing your convenience store
                             </p>
                             <motion.div
@@ -42,7 +43,7 @@ export default function Home({ setShowPage }) {
                                 >
                                     Apply Now</button>
                             </motion.div>
-                            <div className='flex items-center gap-3 mt-5 text-[#FB7A41]'>
+                            <div className='flex items-center gap-3 mt-3 text-[#FB7A41]'>
                                 <p className='text-black font-semibold'>Follow us</p>
                                 <span className='hover:text-black'>
                                     <FaFacebook />
