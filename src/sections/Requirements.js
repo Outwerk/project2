@@ -59,13 +59,13 @@ const Requirements = () => {
                 A FASTER WAY TO FUND YOUR DREAMS
             </h2>
 
-            <div className='ms-1 md:ms-5 lg:ms-52 text-xl'>
+            <div className='ms-1 md:ms-5 lg:ms-24 2xl:ms-40 text-xl mt-0 md:mt-16'>
                 <h1 className='text-2xl mb-7 uppercase'>Requirement</h1>
                 <p>Please send us a signed "Skylight Funding Loan Application"</p>
                 <p>with the following documents to e-mail: apps@skylightfunding.com</p>
             </div>
 
-            <div className="max-w-2xl ms-1 md:ms-5 lg:ms-52 mt-10">
+            <div className="max-w-2xl ms-1 md:ms-5 lg:ms-24 2xl:ms-40 mt-10">
                 {requirements.map((req, index) => (
                     <motion.div
                         key={index}

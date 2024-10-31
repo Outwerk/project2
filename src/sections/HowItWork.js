@@ -32,13 +32,13 @@ const HowItWorks = () => {
 
     return (
         <>
-            <div id="howItWork" className='h-full md:h-screen py-10 pt-24 md:pt-28 '>
+            <div id="howItWork" className='h-full md:h-screen py-10 pt-24 md:pt-28  md:mt-16 lg:mt-24 2xl:mt-16'>
                 <h2 className="text-3xl font-bold mb-6 text-center underline-thick uppercase mt-6 md:mt-0">How It Works</h2>
 
 
 
 
-                <div className='lg:ms-52 md:ms-6 ms-2 p-3 flex flex-col items-center md:items-start justify-center     gap-6 md:gap-10 lg:gap-6'>
+                <div className='lg:ms-24 2xl:ms-40 md:ms-6 ms-2 p-3 flex flex-col items-center md:items-start justify-center     gap-6 md:gap-10 lg:gap-6'>
 
                     <motion.div
                         ref={ref}

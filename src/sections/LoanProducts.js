@@ -92,7 +92,7 @@ const LoanProducts = () => {
 }, []);
 
   return (
-    <div id='loanProducts' className='h-full md:h-screen mb-24 md:mb-12 mt-24 md:mt-12 lg:mt-28'>
+    <div id='loanProducts' className='h-full md:h-screen mb-24 md:mb-12 mt-24 md:mt-12 lg:mt-32'>
       <div className="max-w-6xl mx-auto p-6 pt-8 md:pt-36">
         <h2 ref={ref} className="text-3xl font-bold mb-6 text-center underline-thick uppercase mt-12 md:mt-0">Loan products</h2>
         <div className="grid place-content-center md:grid-cols-2 lg:grid-cols-4 gap-6">
